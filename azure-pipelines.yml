@@ -18,7 +18,7 @@ steps:
     npm run build
   displayName: 'npm build'
 
-  - task: CopyFiles@2
+- task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: |
@@ -33,4 +33,3 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     publishLocation: 'pipeline'
   displayName: 'Publish npm artifact'
-  
